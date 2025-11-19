@@ -1,0 +1,22 @@
+npm => node package manager 
+init => initialize -y(yes)
+
+for contineously running of program what ever it change in the project => 
+    nodemon
+    npm i -g nodemon
+nodemon index.js // base case 
+if you define some start or script command then 
+nodemon index.js in the package.json file and then run 
+    npm start for running nodemon nad project
+
+
+Module: (types);
+    Core Modules
+        Built-in module provided by Node.js such as fs, http, path, etc.
+    Local Modules
+        Custome modules created by developers and located withing the project
+    Third-party Modules
+        Modules install via npm(expres, nodemon)
+
+
+import and export through require if type is common
