@@ -20,3 +20,12 @@ Module: (types);
 
 
 import and export through require if type is common
+
+
+creating server through 
+WEB APP ----> frontend
+            > Backend(take two things request and response)
+            request => frontend k data ko backend main lena 
+            response => backend k data frontend main dyne k liye
+
+http is inbuild 
