@@ -19,3 +19,21 @@ RESTfull API Support
 Structure your project with MVC (Model-view-Controller) for mainainability.
 
 npm i express 
+
+Routing Params - request and response
+  GET method => data display or render the data 
+  POST method => jaha apna data secure ho api direct access , 
+  api main form k data fronend araha ha 
+  secure method
+  kisi request se data lena
+
+  three way to send data from frontend to backend 
+    body=> json main send krty handling
+    query=> through link se access(url we get data) used in get post of time 
+    params=>dynamic value, parameter k through access hota ha .
+
+[[AGAR FRONTEND SE JSON MAIN DATA AYE TU NECESSORY HA K APP MENTION KRO   app.use(express.json())]]
+
+
+
+Use Thunder client to test the api 
