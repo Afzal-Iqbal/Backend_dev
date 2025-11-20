@@ -1,0 +1,21 @@
+expres.js is a lightwieght adn flexible Node.js web application framework.
+it simplie building web application and APIs by providing a robust set of features.
+
+CORE Features 
+Routing => APIs created easily through https methods(GET, POST, PUT, DELETE, etc) 
+it enable dynamic and nested route
+
+Middleware 
+    Function excecuted in the request-response cycle.
+
+Templating
+    Integrate with templating engines like EJS, Pug and Handlebars to generate dynamic
+
+RESTfull API Support
+
+  ideal for creating RESTful services with clean and organized code.
+  simplifies handling JSON adn form data
+
+Structure your project with MVC (Model-view-Controller) for mainainability.
+
+npm i express 
