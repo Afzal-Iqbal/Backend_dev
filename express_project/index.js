@@ -1,47 +1,36 @@
-let express = require("express")
+const express = require('express');
 
-let app=express();
-app.use(express.json())
+const app = express();
+app.use(express.json());
 
-app.get("/",(_,res)=>{ // https://localhost:8000/
-    res.send({
-        status:1,
-        msg: "Home page API"
-    })
-})
-app.get('/news',(_,res)=>{
-    res.send({
-        status:1,
-        msg:"news api is called"
-    })
-})
+const PORT = process.env.PORT || 8000;
 
-//params data is the dynamic value from the url here id is key
-app.get("/news/:id",(req,res)=>{
-    let currentId = req.params.id
-    res.send("this news detail api "+currentId);
-})
-app.get("/products",(req,res)=>{
-    res.send({
-        status: 32,
-        msg:"Prduct api created"
-    }
-    )
-})
+app.get('/', (_req, res) => {
+  res.json({ status: 1, msg: 'Home page API' });
+});
 
+app.get('/news', (_req, res) => {
+  res.json({ status: 1, msg: 'news api is called' });
+});
 
-// through json parameter
-app.post("/login",(req,res)=>{
-    console.log(req.body)
-    // res.send({status:1,
-    //     msg:"Login api through post",
-    //     data:req.body,
-    //     queryData:req.query // accessing query params
-    // })
-    res.status(200).json({
-            msg:"Login api through post",
-            data:req.body,
-            queryData:req.query // accessing query params
-    })
-})
-app.listen("8000")
+app.get('/news/:id', (req, res) => {
+  const { id } = req.params;
+  res.json({ status: 1, msg: `News Details API for id ${id}` });
+});
+
+app.get('/products', (_req, res) => {
+  res.json({ status: 1, msg: 'Product api created' });
+});
+
+app.post('/login', (req, res) => {
+  res.status(200).json({
+    status: 1,
+    msg: 'Login API',
+    bodyData: req.body,
+    queryData: req.query,
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
+});
