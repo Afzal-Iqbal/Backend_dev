@@ -3,7 +3,7 @@ require("dotenv").config()
 const { checkToken } = require('./checkTokenMiddleware.js');
 const app = express();
 
-console.log(ProcessingInstruction.env.myToken)
+console.log(process.env.myToken)
 app.use(express.json());
 
 const PORT = process.env.PORT || 8000;

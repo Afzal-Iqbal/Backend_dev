@@ -1,4 +1,5 @@
 let myToken = "12344";
+console.log(process.env.myToken)
 let checkToken = (req, res, next) => {
     if (req.query.token === "" || req.query.token === undefined) {
         return res.send({

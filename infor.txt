@@ -29,3 +29,148 @@ WEB APP ----> frontend
             response => backend k data frontend main dyne k liye
 
 http is inbuild 
+
+
+MangooDB command
+show dbs
+admin   40.00 KiB
+config  12.00 KiB
+local   40.00 KiB
+show databases
+admin   40.00 KiB
+config  12.00 KiB
+local   40.00 KiB
+use myschoolDB
+switched to db myschoolDB
+db.createCollection("student")
+{ ok: 1 }
+student.drop()
+ReferenceError: student is not defined
+db.student.drop()
+true
+db.createCollection("student")
+{ ok: 1 }
+db.student.renameCollection("Students")
+{ ok: 1 }
+db.studet
+myschoolDB.studet
+db.Students.insertone({})
+TypeError: db.Students.insertone is not a function
+db.Students.insertone({
+  "sName":"Ali",
+  "sEmail":"Ali@gmail.com"
+})
+TypeError: db.Students.insertone is not a function
+db.Students.insertone({
+  "sName":"Ali",
+  "sEmail":"Ali@gmail.com"
+})
+TypeError: db.Students.insertone is not a function
+db.Students.insertOne({
+  "sName": "Ali",
+  "sEmail": "Ali@gmail.com"
+})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6947df80bc45d1bd8e020663')
+}
+db.Students.insertOne({
+  "sName": "sana",
+  "sEmail": "sana@gmail.com"
+})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6947dff6bc45d1bd8e020664')
+}
+db.Students.insertMany([
+  {"sName":"ahmed",
+  "SEmail":"ahmed@gmail.com"},
+  {
+    "sName":"maaz",
+    "sEmail":"maaz@gmail.com"
+  }
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6947e07abc45d1bd8e020665'),
+    '1': ObjectId('6947e07abc45d1bd8e020666')
+  }
+}
+db.Students.find()
+{
+  _id: ObjectId('6947df80bc45d1bd8e020663'),
+  sName: 'Ali',
+  sEmail: 'Ali@gmail.com'
+}
+{
+  _id: ObjectId('6947dff6bc45d1bd8e020664'),
+  sName: 'sana',
+  sEmail: 'sana@gmail.com'
+}
+{
+  _id: ObjectId('6947e07abc45d1bd8e020665'),
+  sName: 'ahmed',
+  SEmail: 'ahmed@gmail.com'
+}
+{
+  _id: ObjectId('6947e07abc45d1bd8e020666'),
+  sName: 'maaz',
+  sEmail: 'maaz@gmail.com'
+}
+db.Students.find({"sName":"Ali","sEmail":"Ali@gmail.com"})
+{
+  _id: ObjectId('6947df80bc45d1bd8e020663'),
+  sName: 'Ali',
+  sEmail: 'Ali@gmail.com'
+}
+db.Students.findone({_ObjectId("6947df80bc45d1bd8e020663")})
+SyntaxError: Unexpected token (1:31)
+
+> 1 | db.Students.findone({_ObjectId("6947df80bc45d1bd8e020663")})
+    |                                ^
+db.Students.findOne({_ObjectId("6947df80bc45d1bd8e020663")})
+SyntaxError: Unexpected token (1:31)
+
+> 1 | db.Students.findOne({_ObjectId("6947df80bc45d1bd8e020663")})
+    |                                ^
+db.Students.findOne({_id:ObjectId("6947df80bc45d1bd8e020663")})
+{
+  _id: ObjectId('6947df80bc45d1bd8e020663'),
+  sName: 'Ali',
+  sEmail: 'Ali@gmail.com'
+}
+db.Students.updateOne({_id:ObjectId("6947e07abc45d1bd8e020665")},{$set:{"sName":"Ahmad","sEmail":"AhmadAli@gmail.com"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.Students.find();
+{
+  _id: ObjectId('6947df80bc45d1bd8e020663'),
+  sName: 'Ali',
+  sEmail: 'Ali@gmail.com'
+}
+{
+  _id: ObjectId('6947dff6bc45d1bd8e020664'),
+  sName: 'sana',
+  sEmail: 'sana@gmail.com'
+}
+{
+  _id: ObjectId('6947e07abc45d1bd8e020665'),
+  sName: 'Ahmad',
+  SEmail: 'ahmed@gmail.com',
+  sEmail: 'AhmadAli@gmail.com'
+}
+{
+  _id: ObjectId('6947e07abc45d1bd8e020666'),
+  sName: 'maaz',
+  sEmail: 'maaz@gmail.com'
+}
+myschoolDB
+Selection deleted
+
+
