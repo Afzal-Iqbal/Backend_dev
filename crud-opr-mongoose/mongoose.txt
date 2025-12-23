@@ -1,0 +1,6 @@
+what is Mongoose?
+ it is an ODM (Object Data Modelling ) library for MongoDB.
+
+Model => table blueprint(kiya kiya field hongi)
+DBURL = mongodb://127.0.0.1:27017/userEnquiry//(db name)
+model => table ko define krye gy
