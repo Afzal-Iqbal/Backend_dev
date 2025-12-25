@@ -1,0 +1,10 @@
+MVC => Model view and controller
+MODEL => all schema main data,
+view => rendering or display of data
+controller => all functionality 
+
+
+api url => in route
+
+customize the functionality.
+systematic way
